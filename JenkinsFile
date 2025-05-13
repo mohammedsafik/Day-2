@@ -12,7 +12,6 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                
                 sh 'echo Running tests....'
             }
         }
@@ -20,14 +19,12 @@ pipeline {
         stage('Docker Build') {
             steps {
                 echo 'Building Docker image...'
-                
             }
         }
 
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
-              
                 sh 'docker run -d -p 80:80 --name my-app nginx'
             }
         }
