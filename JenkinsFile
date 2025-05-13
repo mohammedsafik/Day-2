@@ -14,7 +14,7 @@ pipeline {
             steps {
                 echo 'Running tests...'
                 // Replace with test command if you have one
-                sh 'echo Running tests...'
+                sh 'echo Running tests....'
             }
         }
 
