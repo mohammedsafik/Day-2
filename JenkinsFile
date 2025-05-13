@@ -1,0 +1,37 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the application...'
+                // Replace with your actual build command (e.g., npm install, mvn package)
+                sh 'echo Building...'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                // Replace with test command if you have one
+                sh 'echo Running tests...'
+            }
+        }
+
+        stage('Docker Build') {
+            steps {
+                echo 'Building Docker image...'
+                
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the application...'
+                // Example: Run the container
+                sh 'docker run -d -p 80:80 --name my-app nginx'
+            }
+        }
+    }
+}
+
